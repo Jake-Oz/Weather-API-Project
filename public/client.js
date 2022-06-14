@@ -15,15 +15,21 @@ if ("geolocation" in navigator) {
     const json = await response.json();
     const weatherData = json.weather_data;
     const air_qualityData = json.aq_data;
-    // document.getElementById("location").textContent =
-    //   weatherData.data[0].city_name;
-    // document.getElementById("summary").textContent =
-    //   weatherData.data[0].weather.description;
-    // const iconElement = document.getElementById("icon");
-    // iconElement.src = `icons/${weatherData.data[0].weather.icon}.png`;
-    // iconElement.style.width = "30px";
-    // document.getElementById("temperature").textContent =
-    //   weatherData.data[0].app_temp;
+    try {
+      document.getElementById("location").textContent =
+        weatherData.data[0].city_name;
+      document.getElementById("summary").textContent =
+        weatherData.data[0].weather.description;
+      const iconElement = document.getElementById("icon");
+      iconElement.src = `icons/${weatherData.data[0].weather.icon}.png`;
+      iconElement.style.width = "30px";
+      document.getElementById("temperature").textContent =
+        weatherData.data[0].app_temp;
+    } catch (error) {
+      console.log("Something went wrong retrieving weather data...");
+      document.getElementById("weather").innerHTML =
+        "Sorry - There is no weather information at this location.";
+    }
     try {
       const measurements = air_qualityData.results[0].measurements;
       document.getElementById("aq_parameter").textContent =
@@ -36,7 +42,7 @@ if ("geolocation" in navigator) {
         "aq_pm_ten"
       ).textContent = `${measurements[0].value} ${measurements[0].unit}`;
     } catch (error) {
-      console.log("Something went wrong...");
+      console.log("Something went wrong retrieving air quality data...");
       document.getElementById("air_quality").innerHTML =
         "Sorry - There is no air quality information at this location.";
     }
@@ -64,7 +70,9 @@ async function addMarkers() {
 
   for (let i = 0; i < json.length; i++) {
     latlngsArray.push([json[i].lat, json[i].long]);
-    const marker = L.marker([json[i].lat, json[i].long]);
+    const marker = L.marker([json[i].lat, json[i].long])
+      .bindPopup(document.getElementById("weather").innerHTML)
+      .openPopup();
     markers.addLayer(marker);
   }
   markers.addTo(map);

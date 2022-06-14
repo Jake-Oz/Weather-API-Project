@@ -1,3 +1,4 @@
+{"lat":"-35.3170482","long":" 149.1039988","_id":"0SLaKpyTaYI5zPrA"}
 {"lat":"-35.3170377","long":" 149.1040329","_id":"3CNGjIWF5NleIrJS"}
 {"lat":"52.520007","long":" 13.404954","_id":"43MVSiyknWXrTyGz"}
 {"lat":"35.689487","long":" 139.691706","_id":"4wTXyM15HsZmzoIe"}
@@ -19,6 +20,7 @@
 {"lat":"-60","long":" -122.419416","_id":"BjVQ0Y9GEEZbGDn8"}
 {"lat":"52.520007","long":" 13.404954","_id":"BotxlMh7GR0yEXkY"}
 {"lat":"35.689487","long":" 139.691706","_id":"C56sCQbu2l3ve9ju"}
+{"lat":"-35.3170586","long":" 149.104029","_id":"CPgww1mwj73hpQHY"}
 {"lat":"-35.3170484","long":" 149.1039991","_id":"CTLWyoOpdanPu5u0"}
 {"lat":"-60","long":" 0","_id":"ClU3NZ74ruAljwTl"}
 {"lat":"52.520007","long":" 13.404954","_id":"DWncTL1BOhPYA6ed"}
@@ -44,9 +46,11 @@
 {"lat":"52.520007","long":" 13.404954","_id":"T2zCvEHCBIS8k3Ta"}
 {"lat":"35.689487","long":" 139.691706","_id":"UVnt7LhX98DGLHQt"}
 {"lat":"35.689487","long":" 139.691706","_id":"VcMXQGSmzYFUm7lA"}
+{"lat":"-35.3170482","long":" 149.1039988","_id":"WKEtUeO6FY87EioD"}
 {"lat":"52.520007","long":" 13.404954","_id":"WrNM2KY0NEuOejl1"}
 {"lat":"35.689487","long":" 139.691706","_id":"XuOlzAgVL4h1iL6h"}
 {"lat":"35.689487","long":" 139.691706","_id":"YKiEeg6wyGNjgneK"}
+{"lat":"-35.3170481","long":" 149.1040014","_id":"ZE1od98kwm85xq5P"}
 {"lat":"35.689487","long":" 139.691706","_id":"ZckMsJq2SuSzZVpd"}
 {"lat":"35.689487","long":" 139.691706","_id":"ZhRW2FpuS2H1YzjP"}
 {"lat":"52.520007","long":" 13.404954","_id":"bmC4nz5hvFi5iy8E"}
@@ -55,12 +59,14 @@
 {"lat":"52.520007","long":" 13.404954","_id":"djbdWjTBW2NiTpMG"}
 {"lat":"-60","long":" 130","_id":"eIvuFmpTILCmWoou"}
 {"lat":"35.689487","long":" 139.691706","_id":"f8ml6zkeFr2TiQTs"}
+{"lat":"-35.3170331","long":" 149.1040169","_id":"foP65W5GRLJErAdU"}
 {"lat":"70","long":" 0","_id":"hQ8nPbokHW3K2VBs"}
 {"lat":"35.689487","long":" 139.691706","_id":"hunIxOUYU2bHvy9p"}
 {"lat":"31.230416","long":" 121.473701","_id":"hwhedFlrIL7gODLr"}
 {"lat":"52.520007","long":" 13.404954","_id":"iz4yWUjl7tABx1Q3"}
 {"lat":"0","long":" 0","_id":"kjrzVIxD2ru3iQ60"}
 {"lat":"52.520007","long":" 13.404954","_id":"lcjmbAgxW425slqK"}
+{"lat":"35.689487","long":" 139.691706","_id":"m71yxXXxqB4jW0IE"}
 {"lat":"52.520007","long":" 13.404954","_id":"nZlxEzkKTeCHYizf"}
 {"lat":"35.689487","long":" 139.691706","_id":"o7v4i5qPTMdEgYVl"}
 {"lat":"35.689487","long":" 139.691706","_id":"o8MdtNuPBYsRWGWx"}
@@ -72,6 +78,7 @@
 {"lat":"52.520007","long":" 13.404954","_id":"qcggb2jSIrKUR81L"}
 {"lat":"-35.3170482","long":" 149.1039988","_id":"rIK1149cnZf9JfF1"}
 {"lat":"-35.3170585","long":" 149.1040101","_id":"rbiSQl8NCWNywEAO"}
+{"lat":"35.689487","long":" 139.691706","_id":"s1MXzw4q6bs4TQ9W"}
 {"lat":"-35.3170655","long":" 149.1039953","_id":"t9gChGn28GaPAu6a"}
 {"lat":"35.689487","long":" 139.691706","_id":"urVBWu2sVnkP6u7Y"}
 {"lat":"35.689487","long":" 139.691706","_id":"v8CtNP9sbXtjUlRY"}
@@ -81,9 +88,9 @@
 {"lat":"37.774929","long":" -122.419416","_id":"xDPdqjDP8apsxYUz"}
 {"lat":"52.520007","long":" 13.404954","_id":"xwSjv7wmbY6HoQBy"}
 {"lat":"52.520007","long":" 13.404954","_id":"yJSHUROpslzDym5l"}
+{"lat":"-35.3170359","long":" 149.1040172","_id":"yjYJ7AK5gxBvdkvf"}
 {"lat":"35.689487","long":" 139.691706","_id":"z9zemCtcyAJHeBnl"}
 {"lat":"52.520007","long":" 13.404954","_id":"zVS52fwYs1Xr96jf"}
 {"lat":"52.520007","long":" 13.404954","_id":"zeuxk834a2NilPSP"}
 {"lat":"35.689487","long":" 139.691706","_id":"zxgmR5a9Q7QjmFbT"}
 {"lat":"-60","long":" -122.419416","_id":"zyGzQbJLbOJFBqa9"}
-{"lat":"35.689487","long":" 139.691706","_id":"m71yxXXxqB4jW0IE"}
