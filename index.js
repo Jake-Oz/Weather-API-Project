@@ -7,7 +7,7 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
-const db = new Datastore({ filename: "database" });
+const db = new Datastore({ filename: "database.db" });
 
 db.loadDatabase(function (err) {
   if (err) {
