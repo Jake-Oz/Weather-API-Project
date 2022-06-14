@@ -4,7 +4,8 @@ const express = require("express");
 const fetch = require("node-fetch");
 const Datastore = require("nedb");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
 
 const db = new Datastore({ filename: "database" });
 
@@ -16,8 +17,8 @@ db.loadDatabase(function (err) {
 
 app.use(express.static("public"));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
 
 app.get("/weather/:latlon", async (request, response) => {
@@ -29,7 +30,7 @@ app.get("/weather/:latlon", async (request, response) => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "59a0018805msh1af9d87852742d0p1614f9jsn5936d8d15e9e",
+      "X-RapidAPI-Key": process.env.API_KEY,
       "X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com",
     },
   };
