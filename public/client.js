@@ -81,3 +81,18 @@ async function addMarkers() {
   var polyline = L.polyline(latlngsArray);
   map.fitBounds(polyline.getBounds());
 }
+
+async function postStuff() {
+  const data = await fetch("/api", {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify({ data: "hello" }), // body data type must match "Content-Type" header
+  });
+  const text = await data.text();
+  console.log(text);
+}
+
+postStuff();

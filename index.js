@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 const Datastore = require("nedb");
 const app = express();
 require("dotenv").config();
+
 const PORT = process.env.PORT || 3000;
 
 const db = new Datastore({ filename: "database.db" });
@@ -16,6 +17,7 @@ db.loadDatabase(function (err) {
 });
 
 app.use(express.static("public"));
+app.use(express.json({ limit: "1mb" }));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
@@ -50,4 +52,9 @@ app.get("/weatherData", (request, response) => {
   db.find({}, function (err, docs) {
     response.json(docs);
   });
+});
+
+app.post("/api", (req, res) => {
+  res.send("Got a post request");
+  console.log(req.body.data);
 });
