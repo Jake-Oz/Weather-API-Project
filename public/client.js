@@ -70,8 +70,11 @@ async function addMarkers() {
 
   for (let i = 0; i < json.length; i++) {
     latlngsArray.push([json[i].lat, json[i].long]);
+    const timeStamp = json[i].timestamp.split(" ");
     const marker = L.marker([json[i].lat, json[i].long])
-      .bindPopup(document.getElementById("weather").innerHTML)
+      .bindPopup(
+        `The temperature in ${json[i].city} at ${timeStamp[1]} on ${timeStamp[0]} was ${json[i].temp}°C`
+      )
       .openPopup();
     markers.addLayer(marker);
   }

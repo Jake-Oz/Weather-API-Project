@@ -39,12 +39,19 @@ app.get("/weather/:latlon", async (request, response) => {
 
   let aq_url = `https://api.openaq.org/v2/latest?limit=100&page=1&offset=0&sort=desc&has_geo=true&coordinates=${lat}%2C${lon}&radius=20000&order_by=lastUpdated&dumpRaw=false`;
   aq_url = aq_url.replace(/\s+/g, "");
-  db.insert({ lat: lat, long: lon });
+
   const weather_response = await fetch(weather_url, options);
   const weather_data = await weather_response.json();
   const aq_response = await fetch(aq_url);
   const aq_data = await aq_response.json();
   const allData = { weather_data, aq_data };
+  db.insert({
+    lat: lat,
+    long: lon,
+    city: weather_data.data[0].city_name,
+    timestamp: weather_data.data[0].ob_time,
+    temp: weather_data.data[0].temp,
+  });
   response.json(allData);
 });
 
