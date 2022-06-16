@@ -3,6 +3,7 @@
 const express = require("express");
 const fetch = require("node-fetch");
 const Datastore = require("nedb");
+const dayjs = require("dayjs");
 const app = express();
 require("dotenv").config();
 
@@ -45,11 +46,15 @@ app.get("/weather/:latlon", async (request, response) => {
   const aq_response = await fetch(aq_url);
   const aq_data = await aq_response.json();
   const allData = { weather_data, aq_data };
+  const timeStamp = weather_data.data[0].ob_time.split(" ");
+  const date = dayjs(timeStamp[0]).format("DD-MMM-YY");
+  const time = timeStamp[1];
   db.insert({
     lat: lat,
     long: lon,
     city: weather_data.data[0].city_name,
-    timestamp: weather_data.data[0].ob_time,
+    time: time,
+    date: date,
     temp: weather_data.data[0].temp,
   });
   response.json(allData);
