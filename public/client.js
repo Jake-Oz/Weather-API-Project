@@ -1,8 +1,9 @@
+
 let lat, lon;
 var map = L.map("map").setView([-30, 150], 1);
 document.getElementById("map").style.visibility = "hidden";
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(async (position) => {
+   navigator.geolocation.getCurrentPosition(async (position) => {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     document.getElementById("lat").textContent = lat.toFixed(2);
@@ -14,6 +15,7 @@ if ("geolocation" in navigator) {
     const response = await fetch(data_url);
     const json = await response.json();
     const weatherData = json.weather_data;
+console.log(weatherData);
     const air_qualityData = json.aq_data;
     try {
       document.getElementById("location").textContent =
